@@ -1,3 +1,5 @@
+// Mandiri
+console.log("=================MANDIRI=================")
 const prompt = require('prompt-sync')();
 
 let number = parseInt(prompt("input your number : "))

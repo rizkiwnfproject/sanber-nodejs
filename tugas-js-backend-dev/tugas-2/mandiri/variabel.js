@@ -1,5 +1,4 @@
 // const, let, tipe data primitif, tipe data non primitif
-
 // Buat program yang mendemonstrasikan penggunaan variabel let, const, dan var.
 // Buat program yang mencakup semua tipe data primitif dan non-primitif, serta menggunakan operator aritmatika dan perbandingan.
 
