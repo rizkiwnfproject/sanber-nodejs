@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Test</title>
+</head>
+
+<body>
+    <div id="home">
+        <div class="container mx-auto p-24 flex flex-row w-full justify-around items-center">
+            <div class="w-[50%]">
+                <div class="pb-6">
+                    <h1 class="text-[80px] font-serif font-semibold flex flex-col leading-none tracking-wide">Tasty Food <span
+                            class="text-orange-500">Collections</span>
+                    </h1>
+                </div>
+                <div class="w-96">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam temporibus dolores nostrum
+                        dolor, eveniet quasi tempore provident amet </p>
+                </div>
+                <div class="flex flex-row gap-5">
+                    <button class="mt-6 py-3 px-8 bg-orange-400 text-white text-lg font-semibold tracking-wide rounded-xl ">Let's Started</button>
+                    <button class="mt-6 py-3 px-8 border-2 border-orange-400 text-orange-400 text-lg font-semibold tracking-wide rounded-xl ">Our Contact</button>
+                </div>
+            </div>
+            <img src="./assets/nasiGoreng.jpg" width="450" alt="nasi-goreng" class="rounded-xl">
+        </div>
+    </div>
+</body>
+
+</html>
