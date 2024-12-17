@@ -7,9 +7,9 @@ export interface Product {
   images: string[];
   price: number;
   qty: number;
-  categoryId: Types.ObjectId;
-  createdAt: string;
-  updatedAt: string;
+  categoryId?: Types.ObjectId | null;
+  createdAt: Date;
+  updatedAt: Date;
   _id?: Types.ObjectId;
 }
 
