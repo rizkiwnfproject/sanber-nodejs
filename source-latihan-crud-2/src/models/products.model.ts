@@ -15,7 +15,8 @@ export interface Product {
 
 const Schema = mongoose.Schema;
 
-const ProductsSchema = new Schema<Product>(
+// const ProductsSchema = new Schema<Product>(
+const ProductsSchema = new Schema(
   {
     name: {
       type: Schema.Types.String,
@@ -38,6 +39,10 @@ const ProductsSchema = new Schema<Product>(
       required: true,
       min: [1, "minimal qty adalah 1"]
     },
+    slug: {
+      type: String,
+      unique: true,
+    },
     categoryId: {
       type: Schema.Types.ObjectId,
       ref: "Categories",
@@ -47,6 +52,14 @@ const ProductsSchema = new Schema<Product>(
     timestamps: true,
   }
 );
+
+ProductsSchema.pre("save", function (next) {
+  const product = this;
+  if (!product.slug) {
+    product.slug = product.name.toLowerCase().split(" ").join("-");
+  }
+  next();
+});
 
 const ProductsModel = mongoose.model("Products", ProductsSchema);
 
