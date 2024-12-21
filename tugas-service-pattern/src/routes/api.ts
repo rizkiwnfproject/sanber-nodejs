@@ -1,7 +1,9 @@
 import express from "express";
 
 import uploadMiddleware from "../middlewares/upload.middleware";
+import authMiddleware from "../middlewares/auth.middleware";
 import uploadController from "../controllers/upload.controller";
+import authController from "../controllers/auth.controller";
 import productsController from "../controllers/products.controller";
 import categoriesController from "../controllers/categories.controller";
 
@@ -24,5 +26,9 @@ router.get("/categories/:id", categoriesController.findOne);
 router.put("/categories/:id", categoriesController.update);
 router.delete("/categories/:id", categoriesController.delete);
 
+router.post("/auth/login", authController.login);
+router.post("/auth/register", authController.register);
+router.post("/auth/me", authMiddleware, authController.me);
+router.put("/auth/update-profile", authMiddleware, authController.updateProfile);
 
 export default router;
