@@ -7,13 +7,13 @@ export default {
             const result = await CategoriesModel.create(req.body);
             res.status(201).json({
                 data: result,
-                message: "Success create product",
+                message: "Success create categories",
             });
         } catch (error) {
             const err = error as Error;
             res.status(500).json({
                 data: err.message,
-                message: "Failed create product",
+                message: "Failed create categories",
             });
         }
     },
@@ -22,13 +22,13 @@ export default {
             const result = await CategoriesModel.find();
             res.status(200).json({
                 data: result,
-                message: "Success get all products",
+                message: "Success get all categories",
             });
         } catch (error) {
             const err = error as Error;
             res.status(500).json({
                 data: err.message,
-                message: "Failed get all products",
+                message: "Failed get all categories",
             });
         }
     },
@@ -39,13 +39,13 @@ export default {
             });
             res.status(200).json({
                 data: result,
-                message: "Success get one product",
+                message: "Success get one categories",
             });
         } catch (error) {
             const err = error as Error;
             res.status(500).json({
                 data: err.message,
-                message: "Failed get one product",
+                message: "Failed get one categories",
             });
         }
     },
@@ -61,13 +61,13 @@ export default {
 
             res.status(200).json({
                 data: result,
-                message: "Success update product",
+                message: "Success update categories",
             });
         } catch (error) {
             const err = error as Error;
             res.status(500).json({
                 data: err.message,
-                message: "Failed update product",
+                message: "Failed update categories",
             });
         }
     },
@@ -79,13 +79,13 @@ export default {
 
             res.status(200).json({
                 data: result,
-                message: "Success delete product",
+                message: "Success delete categories",
             });
         } catch (error) {
             const err = error as Error;
             res.status(500).json({
                 data: err.message,
-                message: "Failed delete product",
+                message: "Failed delete categories",
             });
         }
     },
